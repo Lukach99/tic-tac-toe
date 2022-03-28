@@ -1,11 +1,11 @@
 {
-  "homepage": "https://lukach99.github.io/tic-tac-toe/",
+  
   "name": "tic-tac-toe",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy" : "npm run build&&gh-pages -d build",
+    
     "css": "node-sass --watch styles.scss styles.css"
     
   },
@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^3.1.0",
     "node-sass": "^7.0.1"
   }
 }
