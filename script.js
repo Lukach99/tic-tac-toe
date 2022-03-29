@@ -115,6 +115,7 @@ function gameLogic(player) {
   }
 }
 const lineElement = document.createElement("span");
+
 function winLine(position) {
   lineElement.classList.add(`line-${position}`);
 
@@ -148,7 +149,6 @@ function checkDraw() {
   });
   return emptyPos;
 }
-console.log(fields);
 
 function restartButton() {
   const restartBtnElement = document.createElement("button");
