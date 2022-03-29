@@ -1,12 +1,70 @@
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  height: 1000px;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 60px;
+  margin-bottom: 100px;
+  margin-top: 80px;
+  color: white;
+  text-shadow: 2px 2px 13px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  color: white;
+  text-shadow: 2px 2px 13px rgba(0, 0, 0, 0.4);
+}
+
+h3 {
+  color: white;
+  font-size: 25px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 13px rgba(0, 0, 0, 0.2);
+}
+
+.font-size {
+  font-size: 20px;
+  color: white;
+}
+
+.restart-btn {
+  position: absolute;
+  top: -20px;
+  width: 150px;
+  height: 40px;
+  background-color: #ffffff00;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+}
+
+.player-score {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+.player-name {
+  margin-bottom: 0;
+}
+
 .player-choice {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: blue;
+
   width: 600px;
-  height: 350px;
+  height: 250px;
   top: 0;
 }
 
@@ -14,11 +72,47 @@
   display: flex;
 }
 
+.player-choice div div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 130px;
+}
+
 .game {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  width: 500px;
+  width: 470px;
+  margin-bottom: 50px;
+}
+
+.scoreboard {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+.scoreboard p {
+  display: inline-block;
+}
+
+.scoreboard div span {
+  display: flex;
+  flex-direction: column;
+}
+.scoreboard header {
+  margin-bottom: 5px;
+
+  border-bottom: 3px solid white;
+
+  padding-bottom: 10px;
+}
+
+.scoreboard div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 main {
@@ -27,6 +121,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 100px;
 }
 
 .square {
@@ -35,8 +130,8 @@ main {
   align-items: center;
   width: 150px;
   height: 150px;
-  background-color: red;
-  border: 3px solid black;
+
+  /* border: 3px solid black; */
 }
 
 .circle {
@@ -44,7 +139,7 @@ main {
   width: 86px;
   height: 86px;
   border-radius: 50%;
-  border: 10px solid white;
+  border: 10px solid rgb(255, 255, 255);
 }
 
 .cross {
@@ -59,101 +154,116 @@ main {
 .cross-1 {
   width: 115px;
   height: 2px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   transform: rotate(45deg);
-  border: 4px solid white;
+  border: 4px solid rgb(255, 255, 255);
 }
 
 .cross-2 {
   position: absolute;
   width: 115px;
   height: 2px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   transform: rotate(-45deg);
-  border: 4px solid white;
+  border: 4px solid rgb(255, 255, 255);
 }
 
 .line-top {
-  width: 400px;
+  width: 520px;
   height: 15px;
-  background-color: black;
-  position: relative;
-  top: 85px;
+  background-color: #242323;
+  position: absolute;
+  top: 67px;
   z-index: 1;
-  left: 30px;
+  left: -33px;
 }
 
 .line-middle {
-  width: 400px;
+  width: 520px;
   height: 15px;
-  background-color: black;
-  position: relative;
-  top: 235px;
+  background-color: #242323;
+  position: absolute;
+  top: 223px;
   z-index: 1;
-  left: 30px;
+  left: -33px;
 }
 
 .line-bottom {
-  width: 400px;
+  width: 520px;
   height: 15px;
-  background-color: black;
-  position: relative;
-  top: 385px;
+  background-color: #242323;
+  position: absolute;
+  top: 377px;
   z-index: 1;
-  left: 30px;
+  left: -33px;
 }
 
 .line-left {
-  width: 400px;
+  width: 510px;
   height: 15px;
-  background-color: black;
-  position: relative;
+  background-color: #242323;
+  position: absolute;
   transform: rotate(90deg);
-  top: 242px;
+  top: 224px;
   z-index: 1;
-  left: -122px;
+  left: -181px;
 }
 
 .line-mid {
-  width: 400px;
+  width: 510px;
   height: 15px;
-  background-color: black;
-  position: relative;
+  background-color: #242323;
+  position: absolute;
   transform: rotate(90deg);
-  top: 242px;
+  top: 224px;
   z-index: 1;
-  left: 34px;
+  left: -25px;
 }
 
 .line-right {
-  width: 400px;
+  width: 510px;
   height: 15px;
-  background-color: black;
-  position: relative;
+  background-color: #242323;
+  position: absolute;
   transform: rotate(90deg);
-  top: 242px;
+  top: 224px;
   z-index: 1;
-  left: 188px;
+  left: 130px;
 }
 
 .line-lt-rb {
-  width: 743px;
-  height: 6px;
-  background-color: black;
-  position: relative;
+  width: 700px;
+  height: 15px;
+  background-color: #242323;
+  position: absolute;
   transform: rotate(45deg);
-  top: 245px;
+  top: 225px;
   z-index: 1;
-  left: -8px;
+  left: -116px;
 }
 
 .line-lb-rt {
-  width: 743px;
-  height: 6px;
-  background-color: black;
-  position: relative;
-  transform: rotate(135deg);
-  top: 230px;
+  width: 700px;
+  height: 15px;
+  background-color: #242323;
+  position: absolute;
+  transform: rotate(315deg);
+  top: 220px;
   z-index: 1;
-  left: -8px;
+  left: -119px;
+}
+
+/* borders */
+
+.border-right {
+  border-right: 10px solid rgb(255, 255, 255);
+}
+
+.border-bottom {
+  border-bottom: 10px solid rgb(255, 255, 255);
+  box-shadow: 0px 15px 15px -19px rgba(0, 0, 0, 0.5);
+}
+
+.shadow-mark {
+  box-shadow: 15px 15px 15px -19px rgba(0, 0, 0, 0.2);
 }
