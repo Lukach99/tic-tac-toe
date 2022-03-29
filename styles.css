@@ -9,9 +9,6 @@
   width: 600px;
   height: 350px;
   top: 0;
-  opacity: 1;
-  -webkit-transition: opacity 200ms ease-out;
-  transition: opacity 200ms ease-out;
 }
 
 .player-choice div {
@@ -23,10 +20,6 @@
   flex-wrap: wrap;
   position: relative;
   width: 500px;
-
-  opacity: 0;
-  -webkit-transition: opacity 200ms ease-in;
-  transition: opacity 200ms ease-in;
 }
 
 main {
@@ -34,6 +27,7 @@ main {
   position: relative;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .square {
