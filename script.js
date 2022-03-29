@@ -4,14 +4,15 @@ const mainElement = document.querySelector("main");
 const gameElement = document.querySelector(".game");
 const playerChoiceList = document.querySelectorAll(".player-choice div div");
 const playerChoice = document.querySelector(".player-choice");
+const scoreboardElement = document.querySelector(".scoreboard");
 
 const cross = `
           <span class="cross">
-            <span class="cross-1"> </span>
-            <span class="cross-2"> </span>
+            <span class="cross-1 shadow-mark"> </span>
+            <span class="cross-2 shadow-mark"> </span>
           </span>`;
 
-const circle = `<span class="circle"> </span>`;
+const circle = `<span class="circle shadow-mark"> </span>`;
 
 class Player {
   constructor(name, mark) {
@@ -30,6 +31,7 @@ playerChoiceList[0].innerHTML = cross;
 playerChoiceList[1].innerHTML = circle;
 
 gameElement.remove();
+scoreboardElement.remove();
 
 player1mark();
 
@@ -43,6 +45,7 @@ function player1mark() {
         player = player1.mark;
         mainElement.prepend(gameElement);
         playerChoice.remove();
+        mainElement.append(scoreboardElement);
       } else if (mark.innerHTML === circle) {
         player1 = new Player("Player 1", circle);
         player2 = new Player("Player 2", cross);
@@ -50,6 +53,7 @@ function player1mark() {
         player = player1.mark;
         playerChoice.remove();
         mainElement.prepend(gameElement);
+        mainElement.append(scoreboardElement);
       }
     });
   });
@@ -135,12 +139,12 @@ function whoWon(player) {
   if (player === player1.mark) {
     h1Element.innerText = "Player 1 WINS";
     player1.score++;
-    document.querySelector(".player1").innerText = `Player1 = ${player1.score}`;
+    document.querySelector(".player1-score").innerText = `${player1.score}`;
     restartButton();
   } else if (player === player2.mark) {
     h1Element.innerText = "Player 2 WINS";
     player2.score++;
-    document.querySelector(".player2").innerText = `Player2 = ${player2.score}`;
+    document.querySelector(".player2-score").innerText = `${player2.score}`;
     restartButton();
   }
 }
@@ -157,8 +161,9 @@ function checkDraw() {
 
 function restartButton() {
   const restartBtnElement = document.createElement("button");
+  restartBtnElement.classList.add("restart-btn");
   restartBtnElement.innerText = "Play Again?";
-  mainElement.prepend(restartBtnElement);
+  mainElement.append(restartBtnElement);
 
   restartBtnElement.addEventListener("click", (event) =>
     fields.forEach((field) => {
