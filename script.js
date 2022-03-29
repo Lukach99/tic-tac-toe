@@ -14,25 +14,22 @@ const cross = `
 const circle = `<span class="circle"> </span>`;
 
 class Player {
-  constructor(playerNum, mark) {
-    this.playerNum = playerNum;
+  constructor(name, mark) {
+    this.name = name;
     this.mark = mark;
     this.score = 0;
   }
 }
 
-player4 = new Player(1, "x");
-player4.score += 1;
-
-console.log(player4);
 let player;
+
+let player1;
+let player2;
 
 playerChoiceList[0].innerHTML = cross;
 playerChoiceList[1].innerHTML = circle;
 
 gameElement.remove();
-
-let player1;
 
 player1mark();
 
@@ -40,15 +37,19 @@ function player1mark() {
   playerChoiceList.forEach((mark) => {
     mark.addEventListener("click", (event) => {
       if (mark.innerHTML === cross) {
-        player = cross;
+        player1 = new Player("Player 1", cross);
+        player2 = new Player("Player 2", circle);
+
+        player = player1.mark;
         mainElement.prepend(gameElement);
         playerChoice.remove();
-        player1 = cross;
       } else if (mark.innerHTML === circle) {
-        player = circle;
+        player1 = new Player("Player 1", circle);
+        player2 = new Player("Player 2", cross);
+
+        player = player1.mark;
         playerChoice.remove();
         mainElement.prepend(gameElement);
-        player1 = circle;
       }
     });
   });
@@ -131,11 +132,15 @@ function gameLogicDivs(index1, index2, index3) {
 }
 
 function whoWon(player) {
-  if (player === cross) {
+  if (player === player1.mark) {
     h1Element.innerText = "Player 1 WINS";
+    player1.score++;
+    document.querySelector(".player1").innerText = `Player1 = ${player1.score}`;
     restartButton();
-  } else if (player === circle) {
+  } else if (player === player2.mark) {
     h1Element.innerText = "Player 2 WINS";
+    player2.score++;
+    document.querySelector(".player2").innerText = `Player2 = ${player2.score}`;
     restartButton();
   }
 }
@@ -162,7 +167,7 @@ function restartButton() {
       lineElement.remove();
       restartBtnElement.remove();
       h1Element.innerText = "Tic-Tac-Toe";
-      player = player1;
+      player = player1.mark;
     })
   );
 }
