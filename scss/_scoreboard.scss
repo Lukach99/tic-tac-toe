@@ -1,0 +1,48 @@
+.scoreboard {
+  @include flex(column, center, stretch);
+  align-self: flex-start;
+  width: 300px;
+
+  &__header {
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+
+    &--h3 {
+      font-size: 25px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 13px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__div {
+    @include flex(row, space-evenly, center);
+
+    &__span {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.font-size {
+  font-size: 20px;
+}
+
+.player-score {
+  margin-top: 0;
+  font-size: 40px;
+}
+
+.player-name {
+  margin-bottom: 0;
+}
+
+.scoreboard p {
+  display: inline-block;
+}
+
+.scoreboard .restart-btn {
+  align-self: center;
+}

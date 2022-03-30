@@ -1,8 +1,8 @@
 const fields = document.querySelectorAll(".game div");
-const h1Element = document.querySelector("h1");
+const h1Element = document.querySelector(".header--h1");
 const mainElement = document.querySelector("main");
 const gameElement = document.querySelector(".game");
-const playerChoiceList = document.querySelectorAll(".player-choice div div");
+const playerChoiceList = document.querySelectorAll(".player-choice__div--mark");
 const playerChoice = document.querySelector(".player-choice");
 const scoreboardElement = document.querySelector(".scoreboard");
 
@@ -115,7 +115,7 @@ function gameLogic(player) {
 
   /* checking if its draw */
   if (checkDraw() === 0 && h1Element.innerText === "Tic-Tac-Toe") {
-    document.querySelector("h1").innerText = "its draw";
+    h1Element.innerText = "its draw";
     restartButton();
   }
 }

@@ -1,0 +1,95 @@
+@media (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    &--h1 {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .player-choice {
+    width: 100%;
+  }
+
+  .game {
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    margin-bottom: 50px;
+    margin-right: 0px;
+  }
+
+  .square {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    align-self: center;
+  }
+
+  .cross-1 {
+    width: 80px;
+  }
+
+  .cross-2 {
+    width: 80px;
+  }
+
+  .scoreboard {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 50px;
+  }
+
+  .scoreboard .restart-btn {
+    align-self: center;
+    position: relative;
+    bottom: 670px;
+  }
+
+  footer {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  /* winning lines */
+  .line-lt-rb {
+    width: 450px;
+  }
+
+  .line-lb-rt {
+    width: 450px;
+  }
+
+  .line-right {
+    width: 350px;
+  }
+  .line-left {
+    width: 350px;
+  }
+  .line-middle {
+    width: 350px;
+  }
+  .line-top {
+    width: 350px;
+  }
+  .line-mid {
+    width: 350px;
+  }
+  .line-bottom {
+    width: 350px;
+  }
+}

@@ -93,6 +93,8 @@ h3 {
 .game {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 470px;
   margin-bottom: 50px;
@@ -135,10 +137,8 @@ h3 {
 
 main {
   display: flex;
-  position: relative;
   justify-content: center;
   align-items: center;
-
   padding-top: 50px;
 }
 

@@ -1,0 +1,58 @@
+html {
+  margin: 0;
+}
+
+body {
+  background: $background-color;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 100vh;
+  margin: 0;
+
+  text-align: center;
+  font-family: $font-family;
+  color: $main-color;
+}
+
+.circle {
+  display: inline-block;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: 10px solid rgb(255, 255, 255);
+}
+
+.cross {
+  position: relative;
+  height: 100px;
+  @include flex(row, center, center);
+  align-self: center;
+
+  &-1 {
+    width: 115px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(45deg);
+    border: 4px solid rgb(255, 255, 255);
+  }
+
+  &-2 {
+    position: absolute;
+    width: 115px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    transform: rotate(-45deg);
+    border: 4px solid rgb(255, 255, 255);
+  }
+}
+
+.shadow-mark {
+  box-shadow: 15px 15px 15px -19px rgba(0, 0, 0, 0.2);
+}

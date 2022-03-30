@@ -1,0 +1,95 @@
+$win-lines-height: 15px;
+$win-lines-width: 520px;
+
+.line-top {
+  width: $win-lines-width;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+
+  z-index: 1;
+  top: 15.9%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-middle {
+  width: $win-lines-width;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-bottom {
+  width: $win-lines-width;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+
+  z-index: 1;
+  top: 84.1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.line-left {
+  width: $win-lines-width;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 16.1%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.line-mid {
+  width: $win-lines-width;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.line-right {
+  width: $win-lines-width;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+
+  z-index: 1;
+  top: 50%;
+  left: 84.1%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.line-lt-rb {
+  width: 700px;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.line-lb-rt {
+  width: 700px;
+  height: $win-lines-height;
+  background-color: $win-lines-color;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(315deg);
+}

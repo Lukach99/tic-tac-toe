@@ -1,0 +1,24 @@
+/* variables */
+$background-color: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%) no-repeat
+  center center fixed;
+$main-color: white;
+$win-lines-color: #242323;
+$font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$text-shadow: 2px 2px 13px rgba(0, 0, 0, 0.4);
+
+/* mixins */
+@mixin flex($dir, $just, $align, $wrap: false, $gsb: false) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $just;
+  align-items: $align;
+  flex-wrap: $wrap;
+
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+
+  @if $gsb {
+    flex: $gsb;
+  }
+}
