@@ -163,7 +163,7 @@ function restartButton() {
   const restartBtnElement = document.createElement("button");
   restartBtnElement.classList.add("restart-btn");
   restartBtnElement.innerText = "Play Again?";
-  mainElement.append(restartBtnElement);
+  scoreboardElement.append(restartBtnElement);
 
   restartBtnElement.addEventListener("click", (event) =>
     fields.forEach((field) => {
