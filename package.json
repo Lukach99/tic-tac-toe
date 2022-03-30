@@ -5,9 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    
-    "css": "node-sass --watch styles.scss styles.css"
-    
+    "css": "node-sass styles.scss test.css"
   },
   "keywords": [],
   "author": "",

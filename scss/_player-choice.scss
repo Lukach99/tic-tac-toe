@@ -1,0 +1,22 @@
+.player-choice {
+  @include flex(column, flex-start, center, wrap);
+  width: 600px;
+  height: 250px;
+  top: 0;
+
+  &__header {
+    &--h2 {
+      h2 {
+        text-shadow: $text-shadow;
+      }
+    }
+  }
+
+  &__div {
+    display: flex;
+
+    &--mark {
+      width: 130px;
+    }
+  }
+}
