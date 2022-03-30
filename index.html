@@ -5,21 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="test.css" />
     <script defer src="script.js"></script>
   </head>
   <body>
-    <header class="header-h1">
-      <h1>Tic-Tac-Toe</h1>
+    <header class="header">
+      <h1 class="header--h1">Tic-Tac-Toe</h1>
     </header>
     <main>
       <section class="player-choice">
-        <header>
-          <h2>Player 1 Pick</h2>
+        <header class="player-choice__header">
+          <h2 class="player-choice__header-h2">Player 1 Pick</h2>
         </header>
-        <div>
-          <div></div>
-          <div></div>
+        <div class="player-choice__div flex-center-both">
+          <div class="player-choice__div--mark"></div>
+          <div class="player-choice__div--mark"></div>
         </div>
       </section>
 
@@ -38,15 +38,15 @@
       </section>
 
       <section class="scoreboard">
-        <header>
-          <h3>SCOREBOARD</h3>
+        <header class="scoreboard__header">
+          <h3 class="scoreboard__header--h3">SCOREBOARD</h3>
         </header>
-        <div>
-          <span>
+        <div class="scoreboard__div">
+          <span class="scoreboard__div__span">
             <p class="player1 font-size player-name">Player1</p>
             <p class="player1-score font-size player-score">0</p>
           </span>
-          <span>
+          <span class="scoreboard__div__span">
             <p class="player2 font-size player-name">Player2</p>
             <p class="player2-score font-size player-score">0</p>
           </span>
