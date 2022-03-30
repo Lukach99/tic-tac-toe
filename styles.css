@@ -295,6 +295,9 @@ main {
 /* media queries */
 
 @media (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+  }
   main {
     flex-direction: column;
   }
@@ -318,6 +321,10 @@ main {
     width: 320px;
     margin-bottom: 50px;
     margin-right: 0px;
+  }
+
+  .player-choice {
+    width: 100%;
   }
 
   .scoreboard {
